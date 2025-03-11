@@ -1,4 +1,4 @@
-# Compile A Lex Program 
+# Compile a Lex Program 
 
 ```
 lex filename.lex
