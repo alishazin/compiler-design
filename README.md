@@ -5,6 +5,7 @@ lex filename.lex
 ```
 This will create a file lex.yy.c
 
+To compile this c file:
 ```
 gcc lex.yy.c -o filename
 ```
