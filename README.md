@@ -26,9 +26,9 @@ This will create a file lex.yy.c
 ```
 yacc -d filename.y
 ```
-This will create files y.tab.c and y.tab.h
+This will create y.tab.c and y.tab.h
 
-To compile this c files:
+To compile the c files:
 ```
 gcc lex.yy.c y.tab.c -o filename
 ```
