@@ -4,14 +4,12 @@
 %}
 
 %union {
-	int ival;
+    int ival;
 }
 
 %token <ival> NUMBER
-%token PLUS MINUS TIMES DIVIDE
+%token PLUS MINUS TIMES DIVIDE LPAREN RPAREN EOL
 %type <ival> expr
-%token LPAREN RPAREN
-%token EOL
 
 %left PLUS MINUS
 %left TIMES DIVIDE
@@ -20,6 +18,7 @@
 %%
 
 calculation:
+    /* empty */
     | calculation expr EOL { printf("Result = %d\n", $2); }
     ;
 
@@ -43,7 +42,7 @@ expr:
 %%
 
 int main() {
-    printf("Enter expressions, one per line:\n");
+    printf("Enter expressions, one per line (press Ctrl+D to exit):\n");
     yyparse();
     return 0;
 }
