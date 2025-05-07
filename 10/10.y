@@ -3,8 +3,13 @@
 #include <stdlib.h>
 %}
 
-%token NUMBER
+%union {
+	int ival;
+}
+
+%token <ival> NUMBER
 %token PLUS MINUS TIMES DIVIDE
+%type <ival> expr
 %token LPAREN RPAREN
 %token EOL
 
